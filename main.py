@@ -1,8 +1,12 @@
 import os
 
+import click
 import requests
 
 
+@click.command(help='Displays the current weather.')
+@click.option('--city', prompt='City', default='london', help='The name of the city to display weather for.')
+@click.option('--country_code', prompt='Country Code', default='uk', help='The country code the city belongs to.')
 def display_weather(city: str, country_code: str) -> None:
 
     BOLD = "\033[1m"
@@ -15,7 +19,7 @@ def display_weather(city: str, country_code: str) -> None:
     if r.ok:
         data = r.json()
     else:
-        print(r.json()['message'])
+        click.echo(r.json()['message'])
         return
 
     description = data['weather'][0]['description']
@@ -27,8 +31,8 @@ def display_weather(city: str, country_code: str) -> None:
         Description: {description}
         Temperature: {temperature}˚C.
     '''
-    print(output)
+    click.echo(output)
 
 
 if __name__ == '__main__':
-    display_weather(city="london", country_code="uk")
+    display_weather()
