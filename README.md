@@ -4,6 +4,12 @@ A python package to request weather data from the [OpenWeather web API](https://
 
 ## Usage
 
+**Requires**
+
+- Python 3.8+
+- Pipenv
+- OpenWeather API Key
+
 **API Key**
 
 You will need an API key to use this package.
