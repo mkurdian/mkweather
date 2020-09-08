@@ -1,7 +1,4 @@
-import os
-
 import click
-import requests
 
 from mkweather import weather
 
