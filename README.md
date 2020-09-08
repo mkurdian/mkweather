@@ -23,18 +23,18 @@ OPEN_WEATHER_API_KEY={your api key goes here}
 
 **Install Package**
 
-`pipenv install .`
+`pipenv install`
 
 **Run**
 
-`pipenv run python main.py`
+`pipenv run mkweather`
 
 **Get Help**
 
-`pipenv run python main.py --help`
+`pipenv run mkweather --help`
 
 ```
-Usage: main.py [OPTIONS]
+Usage: mkweather [OPTIONS]
 
   Displays the current weather.
 
